@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "echovault",
+  "compatibility_date": "2026-09-26",
+  "main": "./worker/index.js",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "echovault-db",
+      "database_id": "2316c15e-4a5f-4b77-b93d-e6a7f1157513"
+    }
+  ]
+}

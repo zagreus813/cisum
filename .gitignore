@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Cloudflare local state / secrets
+.wrangler/
+.dev.vars*
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal music library
+# Keep the directory itself using .gitkeep, but never commit the audio files.
+client/public/music/*
+!client/public/music/.gitkeep
+
+# Auto-generated music catalogs
+# These may expose filenames/metadata from the private local library.
+client/public/library.generated.json
+client/worker/library.generated.js
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+

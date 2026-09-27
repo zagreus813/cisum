@@ -1,0 +1,27 @@
+{
+  "name": "echovault-client",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run sync:music && vite --host 0.0.0.0",
+    "build": "npm run sync:music && vite build",
+    "preview": "npm run build && vite preview",
+    "deploy": "npm run build && wrangler deploy",
+    "db:local": "wrangler d1 execute echovault-db --local --file=./schema.sql",
+    "db:remote": "wrangler d1 execute echovault-db --remote --file=./schema.sql",
+    "sync:music": "node ./scripts/generate-library.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.13.9",
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "latest",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.1",
+    "wrangler": "latest"
+  }
+}

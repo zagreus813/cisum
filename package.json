@@ -1,0 +1,19 @@
+{
+  "name": "echovault-demo",
+  "private": true,
+  "version": "0.3.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "deploy": "npm run deploy -w client",
+    "db:local": "npm run db:local -w client",
+    "db:remote": "npm run db:remote -w client"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
